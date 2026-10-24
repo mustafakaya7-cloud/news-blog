@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #e7e9ea;
+  --x-border: #2f3336;
+  --x-hover: #16181c;
+  --x-muted: #71767b;
+  --x-blue: #1d9bf0;
+  --x-red: #f4212e;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-x-border: var(--x-border);
+  --color-x-hover: var(--x-hover);
+  --color-x-muted: var(--x-muted);
+  --color-x-blue: var(--x-blue);
+  --color-x-red: var(--x-red);
+
+  /* Rubik fontu */
+  --font-sans: var(--font-rubik), Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::selection {
+  background: var(--x-blue);
+  color: #fff;
+}
